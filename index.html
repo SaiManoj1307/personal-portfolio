@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Data Science Portfolio & Analytics Dashboard">
+    <title>Sai Manoj | Data Science Student</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Sai<span class="accent">Manoj</span>.</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#dashboard" class="highlight-link">Live Dashboard</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="greeting">Hello, I'm <span class="accent-text">Polipireddi Sai Manoj</span></p>
+                    <h1 class="headline">Turning Raw Data into <br><span class="gradient-text">Business
+                            Intelligence</span></h1>
+                    <p class="sub-headline">Aspiring Data Scientist & College Student specializing in Predictive
+                        Analytics, Machine Learning, and Interactive Visualizations.</p>
+                    <div class="cta-group">
+                        <a href="#projects" class="btn btn-primary">View Work</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Model Accuracy</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">Univ.</span>
+                            <span class="stat-label">Student</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <!-- The generated image will be set as background in CSS, or we can use a canvas here -->
+                    <div class="glass-card float-animation">
+                        <div class="card-header">
+                            <div class="dot red"></div>
+                            <div class="dot yellow"></div>
+                            <div class="dot green"></div>
+                        </div>
+                        <div class="code-snippet">
+                            <pre><code class="language-python">
+import pandas as pd
+import sklearn
+
+def predict_future(data):
+    model = Model()
+    training = model.fit(data)
+    
+    return training.predict()
+
+# Optimizing metrics...
+# Accuracy: 99.4%
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-down">
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <div class="img-wrapper">
+                            <!-- Placeholder for profile, using a CSS shape for now -->
+                            <i class="fa-solid fa-user-astronaut"></i>
+                        </div>
+                    </div>
+                    <div class="about-content">
+                        <h3>Data Scientist & Problem Solver</h3>
+                        <p>I bridge the gap between complex algorithms and actionable business insights. My passion lies
+                            in uncovering patterns within chaotic data to drive decision-making.</p>
+                        <p>Currently pursuing my degree in Data Science, I have garnered expertise in Python, SQL, and
+                            Deep Learning models. I don't just build models; I build solutions that impact product
+                            growth.</p>
+
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>SQL</span>
+                            <span>Tableau</span>
+                            <span>AWS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-chart-container">
+                        <canvas id="skillsRadarChart"></canvas>
+                    </div>
+                    <div class="skill-cards">
+                        <div class="skill-card">
+                            <i class="fa-solid fa-brain"></i>
+                            <h3>Machine Learning</h3>
+                            <p>Regression, Classification, Clustering, Neural Networks (CNN, RNN/LSTM).</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fa-solid fa-database"></i>
+                            <h3>Data Engineering</h3>
+                            <p>ETL Pipelines, SQL Optimization, Data Warehousing, Web Scraping.</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <h3>Visualization</h3>
+                            <p>Tableau, PowerBI, Matplotlib, Seaborn, Interactive Web Dashboards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Dashboard Demo Section (The "Impressive" Interactive Part) -->
+        <section id="dashboard" class="dashboard-section">
+            <div class="container">
+                <div class="section-header-center">
+                    <h2 class="section-title">Live Analytics Demo</h2>
+                    <p>Interact with this real-time simulated sales analytics dashboard. This demonstrates my ability to
+                        integrate Data Science backends with modern Front-end interfaces.</p>
+                </div>
+
+                <div class="dashboard-ui glass-panel">
+                    <div class="dash-sidebar">
+                        <div class="dash-icon active"><i class="fa-solid fa-chart-pie"></i></div>
+                        <div class="dash-icon"><i class="fa-solid fa-chart-area"></i></div>
+                        <div class="dash-icon"><i class="fa-solid fa-gear"></i></div>
+                    </div>
+                    <div class="dash-main">
+                        <div class="dash-top">
+                            <h3>Sales Forecast (Q4 2025)</h3>
+                            <div class="dash-controls">
+                                <select id="dataset-select">
+                                    <option value="tech">Tech Growth</option>
+                                    <option value="retail">Retail Season</option>
+                                </select>
+                                <button class="btn-sm" id="refresh-data"><i
+                                        class="fa-solid fa-rotate-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="dash-grid">
+                            <div class="dash-card">
+                                <h5>Total Revenue</h5>
+                                <h2 id="revenue-display">$124,500</h2>
+                                <span class="trend positive"><i class="fa-solid fa-arrow-trend-up"></i> +12.5%</span>
+                            </div>
+                            <div class="dash-card">
+                                <h5>Active Users</h5>
+                                <h2 id="users-display">4,290</h2>
+                                <span class="trend positive"><i class="fa-solid fa-arrow-trend-up"></i> +5.2%</span>
+                            </div>
+                            <div class="dash-card big-chart">
+                                <canvas id="revenueChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-img project-1-bg"></div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="badge">NLP</span>
+                                <span class="badge">Python</span>
+                            </div>
+                            <h3>Sentiment Analysis Engine</h3>
+                            <p>A deep learning model analyzing 50k+ product reviews to predict customer sentiment with
+                                94% accuracy. Deployed via Flask API.</p>
+                            <div class="project-links">
+                                <a href="#"><i class="fa-brands fa-github"></i> Source</a>
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-img project-2-bg"></div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="badge">Computer Vision</span>
+                                <span class="badge">TensorFlow</span>
+                            </div>
+                            <h3>Automated Defect Detection</h3>
+                            <p>Industrial CNN model detecting manufacturing defects in real-time video feeds with < 50ms
+                                    latency.</p>
+                                    <div class="project-links">
+                                        <a href="#"><i class="fa-brands fa-github"></i> Source</a>
+                                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Case
+                                            Study</a>
+                                    </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <div class="project-img project-3-bg"></div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="badge">Predictive Analytics</span>
+                                <span class="badge">R</span>
+                            </div>
+                            <h3>Stock Market Forecaster</h3>
+                            <p>Time-series forecasting using ARIMA and LSTM models to predict S&P 500 trends with
+                                interactive visualizations.</p>
+                            <div class="project-links">
+                                <a href="#"><i class="fa-brands fa-github"></i> Source</a>
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h2>Let's Work Together</h2>
+                        <p>I'm currently available for data science internships and junior roles. Have a dataset that
+                            needs analyzing?</p>
+                        <div class="contact-methods">
+                            <div class="method">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+91 8688011086</span>
+                            </div>
+                            <div class="method">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>polipireddisaimanoj@gmail.com</span>
+                            </div>
+                            <div class="method">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span>linkedin.com/in/saimanoj</span>
+                            </div>
+                            <div class="method">
+                                <i class="fa-brands fa-github"></i>
+                                <span>github.com/SaiManoj1307</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Polipireddi Sai Manoj. Built with HTML, CSS, JS.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
